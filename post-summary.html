@@ -1,0 +1,98 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>post add</title>
+</head>
+
+<body>
+    <h2>Add content</h2>
+    <div id="post-container">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro dolores placeat ducimus! Voluptas ea odit
+            voluptatibus quidem saepe doloremque harum eveniet a, quo illo vitae quas provident consectetur sunt?
+            Assumenda nesciunt aut placeat distinctio vel cum corporis sunt in, provident consectetur officia hic
+            adipisci accusamus vero voluptates ratione inventore totam?</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro dolores placeat ducimus! Voluptas ea odit
+            voluptatibus quidem saepe doloremque harum eveniet a, quo illo vitae quas provident consectetur sunt?
+            Assumenda nesciunt aut placeat distinctio vel cum corporis sunt in, provident consectetur officia hic
+            adipisci accusamus vero voluptates ratione inventore totam?</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro dolores placeat ducimus! Voluptas ea odit
+            voluptatibus quidem saepe doloremque harum eveniet a, quo illo vitae quas provident consectetur sunt?
+            Assumenda nesciunt aut placeat distinctio vel cum corporis sunt in, provident consectetur officia hic
+            adipisci accusamus vero voluptates ratione inventore totam?</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro dolores placeat ducimus! Voluptas ea odit
+            voluptatibus quidem saepe doloremque harum eveniet a, quo illo vitae quas provident consectetur sunt?
+            Assumenda nesciunt aut placeat distinctio vel cum corporis sunt in, provident consectetur officia hic
+            adipisci accusamus vero voluptates ratione inventore totam?</p>
+    </div>
+    <div>
+        <textarea name="" id="new-post" cols="60" rows="5" placeholder="text here"></textarea>
+        <button id="post-btn">post</button>
+    </div>
+    <script>
+        //////// step : 1st add event listener to the post button
+        document.getElementById('post-btn').addEventListener('click', function () {
+        //// step : 02nd get the comment inside the text area
+            const postBox = document.getElementById('new-post');
+            const newPost = postBox.value;
+
+        //// step : 03 set the comment inside the comment container
+            // 1. get the comment container
+            // 2. create the new element (p tag)
+            // 3. set the text in the of the comment as innerText of the p tag
+            // add the p tah using appendChild
+            const postContainer = document.getElementById('post-container');
+            const p = document.createElement('p');
+            p.innerText = newPost;
+            postContainer.appendChild(p);
+        //// step : 04 clear the text area
+            postBox.value = '';
+        })
+    </script>
+</body>
+
+</html> 
+<!--  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add comment</title>
+</head>
+<body>
+    <h2>Add your comment</h2>
+    <div id="comment-container">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, et provident? Illo necessitatibus est beatae! Quos dolor corrupti at optio praesentium, nihil dignissimos dolorum debitis quam, facilis perspiciatis, aliquid aspernatur!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, et provident? Illo necessitatibus est beatae! Quos dolor corrupti at optio praesentium, nihil dignissimos dolorum debitis quam, facilis perspiciatis, aliquid aspernatur!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, et provident? Illo necessitatibus est beatae! Quos dolor corrupti at optio praesentium, nihil dignissimos dolorum debitis quam, facilis perspiciatis, aliquid aspernatur!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, et provident? Illo necessitatibus est beatae! Quos dolor corrupti at optio praesentium, nihil dignissimos dolorum debitis quam, facilis perspiciatis, aliquid aspernatur!</p>
+    </div>
+    <div>
+        <textarea name="" id="comment-box" cols="600" rows="5" placeholder="type your comment"></textarea>
+        <button id="add-btn">Add</button>
+    </div>
+    <script>
+        // 01
+        document.getElementById('add-btn').addEventListener('click', function(){
+            // 02
+            const commentBox = document.getElementById('comment-box');
+            const typeComment = commentBox.value;
+            // 03
+            const commentContainer = document.getElementById('comment-container');
+            const p = document.createElement('p');
+            console.log(p)
+            p.innerText = typeComment;
+            commentContainer.append(p)
+            // 04
+            commentBox.value = '';
+        })
+    </script>
+    
+</body>
+</html>
