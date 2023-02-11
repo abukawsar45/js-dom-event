@@ -78,19 +78,15 @@
         <button id="add-btn">Add</button>
     </div>
     <script>
-        // 01
         document.getElementById('add-btn').addEventListener('click', function(){
-            // 02
             const commentBox = document.getElementById('comment-box');
-            const typeComment = commentBox.value;
-            // 03
+            const commentInput = commentBox.value;
             const commentContainer = document.getElementById('comment-container');
             const p = document.createElement('p');
-            console.log(p)
-            p.innerText = typeComment;
-            commentContainer.append(p)
-            // 04
-            commentBox.value = '';
+            p.innerText = commentInput;
+            commentContainer.appendChild(p);
+            commentBox.value = ''
+
         })
     </script>
     
